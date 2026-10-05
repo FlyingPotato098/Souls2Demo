@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cp0nuqe3ishx1"]
+
+[ext_resource type="Script" uid="uid://cu0sf32fslt7l" path="res://script/UserInterface/options_button_manager.gd" id="1_i5v4c"]
+
+[node name="Options" type="Node2D" unique_id=773172499]
+
+[node name="Options_button_manager" type="Control" parent="." unique_id=206636595]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i5v4c")
+
+[node name="Button" type="Button" parent="Options_button_manager" unique_id=1700198877]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 236.0
+offset_right = 846.0
+offset_bottom = 421.0
+text = "there is no options yet
+"
+
+[node name="Quit" type="Button" parent="Options_button_manager" unique_id=1932897420]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 456.0
+offset_right = 753.0
+offset_bottom = 566.0
+text = "quit
+"
+
+[node name="Return" type="Button" parent="Options_button_manager" unique_id=2127673622]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 70.0
+offset_right = 737.0
+offset_bottom = 177.0
+text = "Return
+"
+
+[connection signal="pressed" from="Options_button_manager/Button" to="Options_button_manager" method="_on_button_pressed"]
+[connection signal="pressed" from="Options_button_manager/Quit" to="Options_button_manager" method="_on_quit_pressed"]
+[connection signal="pressed" from="Options_button_manager/Return" to="Options_button_manager" method="_on_return_pressed"]

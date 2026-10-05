@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b4x8k7cefvpsc"]
+
+[ext_resource type="Texture2D" uid="uid://d2ilyhnpjyjv7" path="res://assets/++/Backgrounds/Images/1.jpg" id="1_1l45u"]
+[ext_resource type="Script" uid="uid://dro2gr521cng" path="res://script/UserInterface/button_manager.gd" id="2_q14h8"]
+[ext_resource type="PackedScene" uid="uid://cb3o43g4odnd" path="res://scenes/UserInterface/fade_transition.tscn" id="3_q14h8"]
+
+[node name="Main Menu" type="Node2D" unique_id=573297111]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1602086124]
+position = Vector2(640.00006, 359.5)
+scale = Vector2(0.33333334, 0.3328704)
+texture = ExtResource("1_1l45u")
+
+[node name="Title" type="Label" parent="." unique_id=1096857092]
+offset_left = 517.0
+offset_top = 48.0
+offset_right = 775.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 53
+text = "Souls2D_0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_manager" type="Control" parent="." unique_id=1738343965]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_q14h8")
+
+[node name="Play" type="Button" parent="Button_manager" unique_id=682154231]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 203.0
+offset_right = 758.0
+offset_bottom = 313.0
+text = "Play"
+
+[node name="Options" type="Button" parent="Button_manager" unique_id=1157818419]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 317.0
+offset_right = 758.0
+offset_bottom = 427.0
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="Button_manager" unique_id=1572570817]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 431.0
+offset_right = 757.0
+offset_bottom = 541.0
+text = "quit
+"
+
+[node name="fade_transition" parent="." unique_id=246694828 instance=ExtResource("3_q14h8")]
+visible = false
+offset_left = 1257.2017
+offset_top = 236.42871
+offset_right = 2537.2017
+offset_bottom = 956.4287
+
+[node name="fade_timer" type="Timer" parent="fade_transition" unique_id=1504080506]
+
+[connection signal="pressed" from="Button_manager/Play" to="Button_manager" method="_on_play_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="Button_manager" method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="Button_manager" method="_on_quit_pressed"]
+[connection signal="toggled" from="Button_manager/Quit" to="Button_manager" method="_on_quit_toggled"]
+[connection signal="timeout" from="fade_transition/fade_timer" to="Button_manager" method="_on_fade_timer_timeout"]

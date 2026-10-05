@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="souls game 2D"
-run/main_scene="uid://cd32yowoyy0a1"
+run/main_scene="uid://b4x8k7cefvpsc"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

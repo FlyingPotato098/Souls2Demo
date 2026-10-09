@@ -390,8 +390,8 @@ script = ExtResource("1_gbb13")
 
 [node name="health_boss" type="Node" parent="." unique_id=805885942]
 script = ExtResource("80_8kx7s")
-max_health = 18
-health = 16
+max_health = 11
+health = 6
 
 [node name="boss_health_label" type="Label" parent="health_boss" unique_id=897579408]
 offset_left = -31.0

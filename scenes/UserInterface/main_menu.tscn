@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d2ilyhnpjyjv7" path="res://assets/++/Backgrounds/Images/1.jpg" id="1_1l45u"]
 [ext_resource type="Script" uid="uid://dro2gr521cng" path="res://script/UserInterface/button_manager.gd" id="2_q14h8"]
-[ext_resource type="PackedScene" uid="uid://cb3o43g4odnd" path="res://scenes/UserInterface/fade_transition.tscn" id="3_q14h8"]
 
 [node name="Main Menu" type="Node2D" unique_id=573297111]
 
@@ -54,17 +53,7 @@ offset_bottom = 541.0
 text = "quit
 "
 
-[node name="fade_transition" parent="." unique_id=246694828 instance=ExtResource("3_q14h8")]
-visible = false
-offset_left = 1257.2017
-offset_top = 236.42871
-offset_right = 2537.2017
-offset_bottom = 956.4287
-
-[node name="fade_timer" type="Timer" parent="fade_transition" unique_id=1504080506]
-
 [connection signal="pressed" from="Button_manager/Play" to="Button_manager" method="_on_play_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="Button_manager" method="_on_options_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="Button_manager" method="_on_quit_pressed"]
 [connection signal="toggled" from="Button_manager/Quit" to="Button_manager" method="_on_quit_toggled"]
-[connection signal="timeout" from="fade_transition/fade_timer" to="Button_manager" method="_on_fade_timer_timeout"]

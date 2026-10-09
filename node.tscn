@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://mv46x0im2jd6"]
+
+[ext_resource type="PackedScene" uid="uid://cfuqeebswkt7s" path="res://scenes/Game_/player_1.tscn" id="1_112p8"]
+[ext_resource type="Texture2D" uid="uid://dm17aq4e4rbig" path="res://assets/++/Backgrounds/Images/309631b5-e8cb-4e5f-a782-c69f974e1d50.png" id="3_bss38"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+
+[node name="Node" type="Node" unique_id=235988244]
+
+[node name="Player_1" parent="." unique_id=73978156 instance=ExtResource("1_112p8")]
+position = Vector2(0, -22)
+
+[node name="Camera2D" type="Camera2D" parent="Player_1" unique_id=1290728329]
+position = Vector2(2, -99)
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player_1" unique_id=744609042]
+sprite_frames = SubResource("SpriteFrames_xrivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1143404447]
+z_index = -1
+position = Vector2(-0.9999999, -119.375)
+scale = Vector2(0.4482422, 0.52370304)
+texture = ExtResource("3_bss38")
